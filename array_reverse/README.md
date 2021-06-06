@@ -1,1 +1,1 @@
-![image](./array_reverse/array_reverse.png)
+![image](../array_reverse/array_reverse.png)
