@@ -8,3 +8,4 @@ def revers(arr):
     print(new_array)
 
 revers(list)
+
