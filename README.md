@@ -4,4 +4,4 @@
 
 |#|Challenge|PR Link|
 |----|-----|-------|
-|1|array-reverse|[challenge 1](./array_reverse/README.md)|
+|1|array-reverse|[array reverse](./array_reverse/README.md)|
