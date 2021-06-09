@@ -1,5 +1,11 @@
 list=[2,5,9,6]
 
+def revers(arr):
+    new_array=arr[::-1]
+    return new_array
+
+print(revers(list))
+
 # def revers(arr):
 #     new_array=[]
 #     for i in range(len(arr)-1,-1,-1):
@@ -9,10 +15,10 @@ list=[2,5,9,6]
 
 # revers(list)
 
-def revers(arr):
-    new_array=[0 for i in arr ]
-    for i in range(0,len(arr)):
-        new_array[i]=arr[len(arr)-1-i]
-    print(new_array)
+# def revers(arr):
+#     new_array=[0 for i in arr ]
+#     for i in range(0,len(arr)):
+#         new_array[i]=arr[len(arr)-1-i]
+#     print(new_array)
 
-revers(list)
+# revers(list)
