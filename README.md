@@ -4,6 +4,7 @@
 
 |#|Challenge|PR Link|
 |----|-----|-------|
-|1|array-reverse|[challenge 1](./array_reverse/README.md)|
-|2|array-reverse|[challenge 2](./array_shift/README.md)|
-|3|array-reverse|[challenge 3](./array_binary_search/README.md)|
+|1|array-reverse|[array reverse](./array_reverse/README.md)|
+|2|array-reverse|[array shift](./array_shift/README.md)|
+|3|array-reverse|[array binary search](./array_binary_search/README.md)|
+|3|array-reverse|[linked list](./linked_list/README.md)|
