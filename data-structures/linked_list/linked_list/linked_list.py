@@ -62,8 +62,27 @@ class LinkedList:
         # Loop over all nodes
         # print all values in one line
     #   x=x+'{ '+f'{value}'+' }' + ' -> '
-       
 
+    def insertBefore(self,newVal):
+        
+        current = self.head
+        if current == None:
+            return False
+
+        while current.next != None:
+            if  current.next.value ==self.head.value:
+                newNode = Node()
+                newNode.value= newVal
+                newNode.next =current.next
+                current.next = newNode
+                return True
+
+        current= current.next
+        return False
+            
+
+    def insertAfter(value, newVal):
+        pass
 
 
 
