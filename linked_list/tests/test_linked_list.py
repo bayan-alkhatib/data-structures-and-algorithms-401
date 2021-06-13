@@ -23,15 +23,26 @@ def test_insert_into_linked_list():
 def test_head_point_to_first_node():
     pass
 
-def  test_insert_multiple_nodes():
+def test_insert_multiple_nodes():
     pass
 
 def test_finding_value_within_linked_list():
-    pass
+    LinkList=LinkedList(5)
+    excepted=True
+    actual= LinkList.include()
+    assert excepted==actual
 
 def test_not_finding_value_within_linked_list():
-    pass
+    LinkList=LinkedList(7)
+    excepted=False
+    actual= LinkList.include()
+    assert excepted==actual
 
 def test_collection_of_values_in_linked_list():
-    pass
+    LinkList = LinkedList()
+    LinkList.append(1)
+    LinkList.append(2)
+    LinkList.append(3)
+    actual = LinkedList.__str__
+    expected='( 1 ) -> ( 2 ) -> ( 3 ) -> None'
 
