@@ -10,36 +10,41 @@ class LinkedList:
     def __init__(self):
         self.head = None
      
-
     def insert(self, value):
-        """
-        Adds a node of a value to the head of LL
-        """
+       
         node = Node(value)
         if self.head == None:
             self.head = node
-            self.inestance.append(self.head.value)
+            return self.head.value
         else:
             current = self.head
             self.head = node
             self.head.next = current
-            self.inestance.append(self.head.value)
-        return value
-
+            return self.head.value
+ 
 
     def include(self,value):
-        """
-        Return T/F if value is in the linked list or not
-        """
-        if value in self.inestance:
-            return True
+        if self.head == None:
+            return False
         else:
+            temporary_value=Node(value)
+            while temporary_value:
+                if temporary_value.value==value:
+                    return True
+                temporary_value=temporary_value.next
             return False
 
 
     def __str__(self):
-        self.values=''
-        for item in self.inestance:
-            self.values=self.values+'{'+ f'{item}' +'} '+'-> '
-        self.values=self.values +'NULL'
-        return f'{self.values}'
+    
+        if self.head == None:
+            return 'NULL'
+        else :
+            values=''
+            temporary_value=self.head
+            while temporary_value:
+                values+='{'+ f'{temporary_value.value}' +'} ' + '-> ' 
+                temporary_value=temporary_value.next
+            values=values +'NULL'
+            return f'{values}'
+

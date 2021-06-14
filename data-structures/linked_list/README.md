@@ -1,30 +1,13 @@
-## To Do List:
-
-- [X] Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node.
-- [X] Within your LinkedList class, include a head property.
-- [] Define a method called (insert) which takes any value as an argument and adds a new node with that value to the head of the list with an O(1) Time performance.
-- [] Define a method called (includes )which takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
-- [] Define a method called ( __str__)
-- [] Any exceptions or errors that come from your code should be semantic, capturable errors.
-
-## Tests: 
-- [x] Can successfully instantiate an empty linked list
-- [x] Can properly insert into the linked list
-- [x] The head property will properly point to the first node in the linked list
-- [x] Can properly insert multiple nodes into the linked list
-- [x] Will return true when finding a value within the linked list that exists
-- [x] Will return false when searching for a value in the linked list that does not exist
-- [x] Can properly return a collection of all the values that exist in the linked list
-
-
 # Singly Linked List
-<!-- Short summary or background information -->
 
-## Challenge
-<!-- Description of the challenge -->
+Singly - Singly refers to the number of references the node has. A Singly linked list means that there is only one reference, and the reference points to the Next node in a linked list.
 
-## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+# Challenge
 
-## API
-<!-- Description of each method publicly available to your Linked List -->
+to build linked list dataa structure and add insert, include and str methods to it
+Approach & Efficiency
+approach was subsitution between head and next, big O (1)
+
+# API
+
+insert: Adds a node of a value to the head of LL include: Return T/F if value is in the linked list or not str: print linked list values

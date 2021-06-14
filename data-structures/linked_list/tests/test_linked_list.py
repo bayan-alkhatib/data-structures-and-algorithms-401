@@ -24,7 +24,7 @@ def test_insert_into_linked_list():
 def test_head_point_to_first_node():
     lnk_lst=LinkedList()
     excepted=None
-    actual= lnk_lst.head
+    actual=lnk_lst.head
     assert excepted==actual
 
 
@@ -33,14 +33,15 @@ def test_insert_multiple_nodes():
     lnk_lst.insert(1)
     lnk_lst.insert('a')
     lnk_lst.insert(6)
-    excepted="{4} -> {1} -> {a} -> {6} -> NULL"
+    excepted="{6} -> {a} -> {1} -> NULL"
     actual= lnk_lst.__str__()
     assert excepted==actual
 
 def test_finding_value_within_linked_list():
     lnk_lst=LinkedList()
+    lnk_lst.insert(6)
     excepted=True
-    actual= lnk_lst.include(6)
+    actual=lnk_lst.include(6)
     assert excepted==actual
 
 def test_not_finding_value_within_linked_list():
@@ -49,9 +50,5 @@ def test_not_finding_value_within_linked_list():
     actual= lnk_lst.include('b')
     assert excepted==actual
 
-def test_collection_of_values_in_linked_list():
-    lnk_lst=LinkedList()
-    excepted="{4} -> {1} -> {a} -> {6} -> NULL"
-    actual= lnk_lst.__str__()
-    assert excepted==actual
+
     
