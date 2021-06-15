@@ -1,6 +1,5 @@
 from linked_list import __version__
 
-
 from linked_list.linked_list import (
     Node,
     LinkedList
