@@ -4,9 +4,12 @@
 to add  append insert-after and insert-before methods to linked list data structure
 
 ## Whiteboard Process
-![image](..../data-structures/linked_list/assets/linked_list_append.png)
-![image](..../data-structures/linked_list/assets/linked_list_insert-before.png)
-![image](..../data-structures/linked_list/assets/linked_list-insert_after.png)
+
+![image](./assets/linked_list_append.png)
+
+![image](./assets/linked_list_insert_before.png)
+
+![image](./assets/linked_list_insert_after.png)
 
 ## Approach & Efficiency
 Approach & Efficiency was choosen to be  big O for tom O(n) and space O(1)
