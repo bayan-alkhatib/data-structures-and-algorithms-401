@@ -25,6 +25,7 @@ Approach & Efficiency was choosen to be  big O for time and space:
 
 
 ## API
+- kthFromEnd takes a argument k and return the node’s value that is k from the end of the linked list
 - append: Adds a node of a value to the end of LL
 - insert after: Adds a node of a value after a specified value of LL
 - insert before:Adds a node of a value before a specified value of LL
