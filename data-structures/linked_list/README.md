@@ -5,9 +5,15 @@ Singly - Singly refers to the number of references the node has. A Singly linked
 # Challenge
 
 to build linked list dataa structure and add insert, include and str methods to it
-Approach & Efficiency
-approach was subsitution between head and next, big O (1)
+
+# Approach & Efficiency
+- insert: time O(1) space O(1)
+- include: time O(n) space O(1)
+- str: time O(n) space O(1)
+
 
 # API
 
-insert: Adds a node of a value to the head of LL include: Return T/F if value is in the linked list or not str: print linked list values
+- insert: Adds a node of a value to the head of LL 
+- include: Return T/F if value is in the linked list or not
+-  str: print linked list values
