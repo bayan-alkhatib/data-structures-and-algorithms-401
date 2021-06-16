@@ -48,3 +48,69 @@ class LinkedList:
             values=values +'NULL'
             return f'{values}'
 
+    def append(self,value):
+        current=self.head
+        if self.head ==None:
+            self.head=Node(value)
+            return self.head.value
+        else:
+            while current.next:
+                current=current.next
+            current.next=Node(value)
+            return current.next
+
+    def insert_before(self,val,new_val):
+        try:
+            current=self.head
+            if self.head ==None:
+                self.head=Node(val)
+                return self.head
+            elif current.value == val:
+                       self.insert(new_val)
+            else:
+                while current: 
+                    if  current.next.value== val:
+                        saved_current_val=current.next
+                        current.next=Node(new_val)
+                        current.next.next=saved_current_val 
+                        return current.next
+                    current=current.next
+        except:
+            raise Exception ('Error')
+
+
+    def insert_after(self,val,new_val):
+        try:
+            current=self.head
+            if self.head ==None:
+                self.head=Node(val)
+                return self.head
+            else:
+                while current: 
+                    if  current.value== val:
+                        saved_current_val=current.next
+                        current.next=Node(new_val)
+                        current.next.next=saved_current_val 
+                        return current.next
+                    current=current.next
+        except:
+            raise Exception ('Error')
+
+    def kthFromEnd(self,k):
+        current=self.head
+        length=1
+        while current.next:
+            length+=1
+            current=current.next
+        current=self.head
+        if k>= length:
+            return 'Error! index out of range'
+        elif k<0:
+            return "Error! k can't be negative number"
+        else:
+            count =length-k-1
+            for i in range(length):
+                    if i == count:
+                        return current.value
+                    current =current.next    
+

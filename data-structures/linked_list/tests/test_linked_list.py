@@ -1,6 +1,5 @@
 from linked_list import __version__
 
-
 from linked_list.linked_list import (
     Node,
     LinkedList
@@ -48,6 +47,106 @@ def test_not_finding_value_within_linked_list():
     lnk_lst=LinkedList()
     excepted=False
     actual= lnk_lst.include('b')
+    assert excepted==actual
+
+def test_add_node_to_end_of_linked_list():
+    lnk_lst=LinkedList()
+    excepted=8
+    actual=lnk_lst.append(8)
+    assert excepted==actual
+
+def test_add_multiple_nodes_to_end_of_linked_list():
+    lnk_lst=LinkedList()
+    lnk_lst.append(8)
+    lnk_lst.append(3)
+    lnk_lst.append('b')
+    excepted='{8} -> {3} -> {b} -> NULL'
+    actual=lnk_lst.__str__()
+    assert excepted==actual
+
+def test_insert_node_before_node_middle_of_linked_list():
+    lnk_lst=LinkedList()
+    lnk_lst.append(8)
+    lnk_lst.append(3)
+    lnk_lst.append('b')
+    lnk_lst.append('4')
+    lnk_lst.insert_before('b',7)
+    excepted='{8} -> {3} -> {7} -> {b} -> {4} -> NULL'
+    actual=lnk_lst.__str__()
+    assert excepted==actual
+
+
+def test_insert_node_before_the_first_node():
+    lnk_lst=LinkedList()
+    lnk_lst.append(8)
+    lnk_lst.append(3)
+    lnk_lst.insert_before(8,'a')
+    excepted='{a} -> {8} -> {3} -> NULL'
+    actual=lnk_lst.__str__()
+    assert excepted==actual
+
+def test_insert_after_node_middle_of_linked_list():
+    lnk_lst=LinkedList()
+    lnk_lst.append(8)
+    lnk_lst.append(3)
+    lnk_lst.append('b')
+    lnk_lst.append('4')
+    lnk_lst.insert_after('b',7)
+    excepted='{8} -> {3} -> {b} -> {7} -> {4} -> NULL'
+    actual=lnk_lst.__str__()
+    assert excepted==actual
+
+def test_insert_node_after_last_node():
+    lnk_lst=LinkedList()
+    lnk_lst.append(8)
+    lnk_lst.append(3)
+    lnk_lst.insert_after(8,'a')
+    excepted='{8} -> {a} -> {3} -> NULL'
+    actual=lnk_lst.__str__()
+    assert excepted==actual
+
+def test_k_greater_than_L_list_length():
+    lnk_lst=LinkedList()
+    lnk_lst.append(8)
+    lnk_lst.append(3)
+    lnk_lst.insert_after(8,'a')
+    excepted='Error! index out of range'
+    actual=lnk_lst.kthFromEnd(4)
+    assert excepted==actual
+
+def  test_k_and_length_of_list_the_same():
+    lnk_lst=LinkedList()
+    lnk_lst.append(8)
+    lnk_lst.append(3)
+    lnk_lst.insert_after(8,'a')
+    excepted='Error! index out of range'
+    actual=lnk_lst.kthFromEnd(3)
+    assert excepted==actual
+
+def test_k_not_positive_integer():
+    lnk_lst=LinkedList()
+    lnk_lst.append(8)
+    lnk_lst.append(3)
+    lnk_lst.insert_after(8,'a')
+    excepted="Error! k can't be negative number"
+    actual=lnk_lst.kthFromEnd(-3)
+    assert excepted==actual
+
+
+def test_linked_list_of_size_1():
+    lnk_lst=LinkedList()
+    lnk_lst.append(8)
+    excepted=8
+    actual=lnk_lst.kthFromEnd(0)
+    assert excepted==actual
+
+def test_happy_path():
+    lnk_lst=LinkedList()
+    lnk_lst.append(8)
+    lnk_lst.append(3)
+    lnk_lst.insert_after(8,'a')
+    excepted='a'
+    actual=lnk_lst.kthFromEnd(1)
     assert excepted==actual
 
 
