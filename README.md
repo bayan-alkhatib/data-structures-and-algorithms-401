@@ -10,4 +10,6 @@
 |5|linked list|[linked list](./data-structures/linked_list/README.md)|
 |6|ll-insertions|[ll-insertions](./data-structures/linked_list/README.md)|
 |7|ll-kth-from-end|[ll-kth-from-end](./data-structures/linked_list/README.md)|
-|8|ll-zip|[ll-zip](./challenges//README.md)|
+|8|ll-zip|[ll-zip](./challenges/README.md)|
+|10|Stacks and Queues|[Stacks and Queues](./data-structures/stack-and-queue/README.md)|
+
