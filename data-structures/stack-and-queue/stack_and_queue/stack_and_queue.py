@@ -20,9 +20,9 @@ class Stack():
             if self.top ==None:
                raise Exception
             
+            temp=self.top
             self.top=self.top.next
-
-            return self.top.value
+            return temp.value
         
         except Exception:
             return 'Error!'    
@@ -83,7 +83,4 @@ class Queue():
     def isEmpty(self):
         return self.front==None
 
-queue=Queue()
-
-print(queue.peek)
 
