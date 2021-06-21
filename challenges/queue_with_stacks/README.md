@@ -1,13 +1,15 @@
 # Challenge Summary
-<!-- Description of the challenge -->
+- to create PseudoQueue class and add enqueue  and dequeue methods to it 
 
 ## Whiteboard Process
-<!-- Embedded whiteboard image -->
+![image](./assets/challenge-11-enqueue.png)
+
+![image](./assets/dequeue.png)
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
-
+- enqueue: time O(1)  , space O (1)
+- dequeue: time O(n)  , space O (1)
 ## Solution
-<!-- Show how to run your code, and examples of it in action -->
+- enqueue: method that add to a queue using stack methods in FIFo
 
-
+- dequeue: method that remove fromqueue using stack methods in FIFo
