@@ -9,12 +9,15 @@ class PseudoQueue:
 
     def enqueue(self,value):
         if value!= None:
-            self.rear.push(value)
-            return self.rear.top.value
+            self.front.push(value)
+            return self.front.top.value
         else:
             return False
 
     def dequeue(self):
+        try:
+            if self.front == None:
+                raise Exception
 
             while self.front.top:
                 temp= self.front.pop()
@@ -23,8 +26,10 @@ class PseudoQueue:
             while self.rear:
                 back_to_front=self.rear.pop()
                 self.front.push(back_to_front)
-
             return poped_value
+
+        except Exception:
+            return 'Error!'
 
 
 
