@@ -1,4 +1,4 @@
-from queue_with_stacks import __version__
+from queue_with_stacks.queue_with_stacks import __version__
 from queue_with_stacks.queue_with_stacks import PseudoQueue
 import pytest
 
