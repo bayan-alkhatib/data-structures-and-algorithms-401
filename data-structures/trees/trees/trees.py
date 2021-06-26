@@ -16,13 +16,15 @@ class Binary_Tree:
 
             self.values=[]
          
-            if not self.root:
+            if self.root == None:
                 return "Tree is Empty"
 
             def tree(node):
                self.values+=[node.value]
-               tree(node.left)
-               tree(node.right)
+               if node.left:
+                tree(node.left)
+               if node.right:
+                tree(node.right)
                return self.values
             
             return tree(self.root)
