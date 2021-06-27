@@ -45,8 +45,20 @@ def test_collection_from_postorder_traversal(tree_instance):
 
 
 def test_max_val():
-    actual=tree_instance.max()
-    expected=8
+    b_tree=Binary_Search_Tree()
+    b_tree.root=Node(2)
+    b_tree.root.left=Node(7)
+    b_tree.root.left.left=Node(2)
+    b_tree.root.left.right=Node(6)
+    b_tree.root.left.right.left=Node(5)
+    b_tree.root.left.right.left=Node(11)
+    b_tree.root.right=Node(5)
+    b_tree.root.right.right=Node(9)
+    b_tree.root.right.right.left=Node(4)
+
+
+    actual=b_tree.max()
+    expected=11
     assert actual==expected
 
 
