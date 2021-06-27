@@ -26,6 +26,7 @@ def test_add_left_child_right_child_single_root(tree_instance):
     expected=(3,8)
     assert actual==expected
 
+
 def test_collection_from_preorder_traversal(tree_instance):
     actual=tree_instance.pre_order()
     expected=[5,3,8]
@@ -37,10 +38,29 @@ def test_collection_from_inorder_traversal(tree_instance):
     assert actual==expected
 
 
-def collection_from_postorder_traversal(tree_instance):
+def test_collection_from_postorder_traversal(tree_instance):
     actual=tree_instance.post_order()
     expected=[3,8,5]
     assert actual==expected
+
+
+def test_max_val():
+    b_tree=Binary_Search_Tree()
+    b_tree.root=Node(2)
+    b_tree.root.left=Node(7)
+    b_tree.root.left.left=Node(2)
+    b_tree.root.left.right=Node(6)
+    b_tree.root.left.right.left=Node(5)
+    b_tree.root.left.right.left=Node(11)
+    b_tree.root.right=Node(5)
+    b_tree.root.right.right=Node(9)
+    b_tree.root.right.right.left=Node(4)
+
+
+    actual=b_tree.max()
+    expected=11
+    assert actual==expected
+
 
 
 @pytest.fixture

@@ -22,9 +22,9 @@ class Binary_Tree:
             def tree(node):
                self.values+=[node.value]
                if node.left:
-                tree(node.left)
+                    tree(node.left)
                if node.right:
-                tree(node.right)
+                    tree(node.right)
                return self.values
             
             return tree(self.root)
@@ -64,8 +64,6 @@ class Binary_Tree:
                 return "Tree is Empty"
 
             def tree(node):
-                if not node:
-                    return ' root is empty' 
                 if node.left:
                     tree(node.left)
                 if node.right:
@@ -78,6 +76,26 @@ class Binary_Tree:
             return "Error"
 
 
+    def max(self):
+   
+        if not self.root:
+                return "Tree is Empty"
+
+        self.max=self.root.value
+        def tree(node):
+            if node.value>self.max:
+                self.max=node.value
+            if node.left:
+                tree(node.left)
+            if node.right:
+                tree(node.right)
+            return self.max
+    
+        return tree(self.root)
+
+                
+
+
 class Binary_Search_Tree(Binary_Tree):
 
     def add(self,value):
@@ -87,31 +105,34 @@ class Binary_Search_Tree(Binary_Tree):
             self.root = Node(value)
         else:
         
-            while self.root:
-                if  value < self.root.value : 
-                    if self.root.left == None: 
-                        self.root.left = Node(value)
+            current=self.root
+            while current:
+                if  value < current.value : 
+                    if current.left == None: 
+                        current.left = Node(value)
                         break
-                    self.root = self.root.left
+                    current = current.left
                 else:
-                    if self.root.right == None: 
-                        self.root.right = Node(value)
+                    if current.right == None: 
+                        current.right = Node(value)
                         break
-                    self.root = self.root.right
+                    current = current.right
 
     def Contains(self,value):
         if self.root==None:
             return 'Tree is Empty'
 
-        elif value in self.post_order():
-            return True
-
         else:
-            return False
-
-        
-
-
-
-
+            current=self.root
+            while current:
+                if current.value==value:
+                    return True
+                elif value < current.value : 
+                    if current.left == None: 
+                       return False
+                    current = current.left
+                else:
+                    if current.right == None: 
+                        return False
+                    current = current.right
 

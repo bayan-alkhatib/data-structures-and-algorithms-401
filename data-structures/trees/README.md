@@ -7,19 +7,25 @@ Trees Data Structure represent nodes connected by edges.
     - pre order
     - in order
     - post order
+    - max
 
 - Create a Binary Search Tree class  Define methods :
     - Add 
     - Contains
 
+## Whiteboard Process
+![image](./assets/chalenge16-tree.png)
+
 ## Approach & Efficiency
+- max: time O(logn), space O(1)
 - pre order: time O(n), space O(n)
 - in order: time O(n), space O(n)
 - post order: time O(n), space O(n)
-- Add: time O(n), space O(1)
-- Contains: time O(n), space O(1)
+- Add: time O(logn), space O(1)
+- Contains: time O(logn), space O(1)
 
 ## API
+- max: method that return max value in tree
 - pre order: method that return tree in order < node=> left=> right >
 - in order: method that return tree in order < left=> node=> right >
 - post order: method that return tree in order < left=> right=> node >
