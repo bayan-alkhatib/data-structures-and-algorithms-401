@@ -26,6 +26,7 @@ def test_add_left_child_right_child_single_root(tree_instance):
     expected=(3,8)
     assert actual==expected
 
+
 def test_collection_from_preorder_traversal(tree_instance):
     actual=tree_instance.pre_order()
     expected=[5,3,8]
