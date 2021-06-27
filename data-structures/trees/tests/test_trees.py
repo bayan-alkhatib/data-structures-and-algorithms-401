@@ -38,10 +38,17 @@ def test_collection_from_inorder_traversal(tree_instance):
     assert actual==expected
 
 
-def collection_from_postorder_traversal(tree_instance):
+def test_collection_from_postorder_traversal(tree_instance):
     actual=tree_instance.post_order()
     expected=[3,8,5]
     assert actual==expected
+
+
+def test_max_val():
+    actual=tree_instance.max()
+    expected=8
+    assert actual==expected
+
 
 
 @pytest.fixture

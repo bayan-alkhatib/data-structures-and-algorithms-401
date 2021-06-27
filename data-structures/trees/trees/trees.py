@@ -78,6 +78,10 @@ class Binary_Tree:
             return "Error"
 
 
+    def max(self):
+        pass
+
+
 class Binary_Search_Tree(Binary_Tree):
 
     def add(self,value):

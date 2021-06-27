@@ -16,4 +16,4 @@
 |12|stack-queue-animal-shelter|[stack-queue-animal-shelter](./challenges/stack_queue_animal_shelter/README.md)
 |13|stack-queue-brackets|[stack-queue-brackets](./challenges/stack-queue-brackets/README.md)
 |15|tree|[tree](./data-structures/trees/README.md)|
-
+|16|tree-max|[tree-max](./data-structures/trees/README.md)|
