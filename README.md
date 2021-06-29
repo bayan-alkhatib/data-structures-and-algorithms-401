@@ -17,3 +17,4 @@
 |13|stack-queue-brackets|[stack-queue-brackets](./challenges/stack-queue-brackets/README.md)
 |15|tree|[tree](./data-structures/trees/README.md)|
 |16|tree-max|[tree-max](./data-structures/trees/README.md)|
+|17|tree-breadth-first|[tree-breadth-first](./challenges/tree-breadth-first/README.md)
