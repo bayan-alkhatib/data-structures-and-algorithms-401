@@ -1,9 +1,9 @@
+ 
 class Node:
     def __init__(self,value):
         self.value=value
         self.left=None
         self.right=None
-    
 
 class Binary_Tree:
 
@@ -93,8 +93,8 @@ class Binary_Tree:
     
         return tree(self.root)
 
-                
 
+                
 
 class Binary_Search_Tree(Binary_Tree):
 
@@ -135,4 +135,3 @@ class Binary_Search_Tree(Binary_Tree):
                     if current.right == None: 
                         return False
                     current = current.right
-
