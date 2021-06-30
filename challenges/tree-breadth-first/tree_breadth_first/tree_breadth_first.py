@@ -1,4 +1,5 @@
-from tree_breadth_first.stack_and_queue import Queue 
+from stack_and_queue import Queue 
+from trees import Binary_Tree,Node
 
 
 def breadth_first(tree):
@@ -27,5 +28,17 @@ def breadth_first(tree):
     return values
 
  
+# b_tree=Binary_Tree()
+# b_tree.root=Node(2)
+# b_tree.root.left=Node(7)
+# b_tree.root.left.left=Node(2)
+# b_tree.root.left.right=Node(6)
+# b_tree.root.left.right.left=Node(5)
+# b_tree.root.left.right.right=Node(11)
+# b_tree.root.right=Node(5)
+# b_tree.root.right.right=Node(9)
+# b_tree.root.right.right.left=Node(4)
+
+# print(b_tree)
 
 
