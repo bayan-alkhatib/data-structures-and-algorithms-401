@@ -18,5 +18,5 @@
 |15|tree|[tree](./data-structures/trees/README.md)|
 |16|tree-max|[tree-max](./data-structures/trees/README.md)|
 |17|tree-breadth-first|[tree-breadth-first](./challenges/tree-breadth-first/README.md)
-|18||[tree-fizz-buzz](./challenges/tree-fizz-buzz/README.md)
+|18|tree-fizz-buzz|[tree-fizz-buzz](./challenges/tree-fizz-buzz/README.md)
 
