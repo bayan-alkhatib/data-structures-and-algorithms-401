@@ -22,46 +22,43 @@ class K_ary_tree:
 
 
 
-
 def tree_fizz_buzz(k_ary_tree):
     if not k_ary_tree.root:
         return "Tree is Empty"
     
-    values=[]
     queue=Queue()
+
   
-    if k_ary_tree:
+    if k_ary_tree.root:
         queue.enqueue(k_ary_tree.root)
    
     
     while not queue.isEmpty():
         
         tree_node=queue.dequeue()
-        print(tree_node.value)
 
         if tree_node.value %3==0 and tree_node.value%5==0:
-             values+=['FizzBuzz']
+            tree_node.value ='FizzBuzz'
         elif tree_node.value %3==0:
-            values+=['Fizz']
+            tree_node.value='Fizz'
         elif tree_node.value %5==0:
-            values+=['Buzz']
+            tree_node.value='Buzz'
         else:
-            values+=[str(tree_node.value)]
+              tree_node.value=str(tree_node.value)
 
         
         for child in tree_node.children:
             queue.enqueue(child)
-
-    return values
-
+ 
+    return k_ary_tree
 
 
 
 if __name__=='__main__':
-    k_tree=K_ary_tree()
-    print(k_tree)
-    actual=tree_fizz_buzz(k_tree)
-    print(actual)
+    # k_tree=K_ary_tree()
+    # print(k_tree)
+    # actual=tree_fizz_buzz(k_tree)
+    # print(actual)
     k_tree=K_ary_tree()
     k_tree.root=Node(2)
     k_tree.root.children+=[Node(7)]
