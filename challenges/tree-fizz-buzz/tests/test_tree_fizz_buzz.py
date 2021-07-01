@@ -8,9 +8,12 @@ def test_version():
 
 
 def test_fizz_buzz_expected_output(tree):
-    actual=tree_fizz_buzz(tree)
+    tree_2=tree_fizz_buzz(tree)
+    actual=[tree_2.root.value,tree_2.root.children[0].value,tree_2.root.children[1].value,tree_2.root.children[2].value,tree_2.root.children[3].value,tree_2.root.children[4].value,tree_2.root.children[5].value,tree_2.root.children[6].value,tree_2.root.children[7].value]
     expected=['2','7','Fizz','2','Buzz','FizzBuzz','Buzz','Fizz','4']
-    assert actual==expected
+
+    
+    assert expected==actual
     
 
 def test_fizz_buzz_fail():
