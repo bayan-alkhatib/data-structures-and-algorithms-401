@@ -17,7 +17,7 @@
 |13|stack-queue-brackets|[stack-queue-brackets](./challenges/stack-queue-brackets/README.md)
 |15|tree|[tree](./data-structures/trees/README.md)|
 |16|tree-max|[tree-max](./data-structures/trees/README.md)|
-|17|tree-breadth-first|[tree-breadth-first](./challenges/tree-breadth-first/README.md)
-|18||[tree-fizz-buzz](./challenges/tree-fizz-buzz/README.md)
-|26||[Insertion-Sort](./challenges/insertion-sort/README.md)
+|17|tree-breadth-first|[tree-breadth-first](./challenges/tree-breadth-first/README.md)|
+|18|tree-fizz-buz|[tree-fizz-buzz](./challenges/tree-fizz-buzz/README.md)|
+|26|Insertion-Sort|[Insertion-Sort](./challenges/insertion-sort/README.md)|
 
