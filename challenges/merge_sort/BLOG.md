@@ -33,3 +33,39 @@ ALGORITHM Merge(left, right, arr)
     else
        set remaining entries in arr to remaining values in left
 ```
+## Trace
+
+### Left Split
+![left split](./assets/complete-left-split.png)
+
+Split sample array into 2 halves: L and R,  Call mergesort on L, which will continue to split the lists in half until only 1 element remains.
+
+### Sort and Merge Left Split of the Array
+![left merge](./assets/merge_first_left.png)
+
+Once the left most pair has been split, stitch back together in order, first order.
+
+![left merge](./assets/merge_second_left.png)
+
+Now the same process repeats for L, Stitch complete L backtogether in order.
+
+### Right Split
+![left split](./assets/complete-right-split.png)
+
+Repeat the entire process for R , Call mergesort on R, which will continue to split the lists in half until only 1 element remains.
+
+### Sort and Merge Left Split of the Array
+![right merge](./assets/merge_first_right.png)
+
+Once the left most pair has been split, stitch back together in order, first order.
+
+![right merge](./assets/merge_second_right.png)
+
+now the same process repeats for R, Stitch complete R backtogether in order.
+
+
+
+
+
+
+
