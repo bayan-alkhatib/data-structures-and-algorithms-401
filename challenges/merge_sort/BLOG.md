@@ -1,4 +1,5 @@
 # Merge Sort
+
 ## Description
 Merge sort is a divide and conquer sorting algorithm. It recursiveley splits each portion of the origin array until it's comparing only two arrays with a single element each. It then merges the sorted subarrays back together.
 
@@ -36,32 +37,55 @@ ALGORITHM Merge(left, right, arr)
 ## Trace
 
 ### Left Split
-![left split](./assets/complete-left-split.png)
-
 Split sample array into 2 halves: L and R,  Call mergesort on L, which will continue to split the lists in half until only 1 element remains.
 
-### Sort and Merge Left Split of the Array
-![left merge](./assets/merge_first_left.png)
+![left split](./assets/complete-left-split.png)
 
+
+### Sort and Merge Left Split of the Array
 Once the left most pair has been split, stitch back together in order, first order.
 
-![left merge](./assets/merge_second_left.png)
+![left merge](./assets/merge_first_left.png)
 
 Now the same process repeats for L, Stitch complete L backtogether in order.
 
-### Right Split
-![left split](./assets/complete-right-split.png)
+![left merge](./assets/merge_second_left.png)
 
+
+
+### Right Split
 Repeat the entire process for R , Call mergesort on R, which will continue to split the lists in half until only 1 element remains.
 
+![right split](./assets/complete-right-split.png)
+
+
+
 ### Sort and Merge Left Split of the Array
+Once the left most pair has been split, stitch back together in order, first order.
+
 ![right merge](./assets/merge_first_right.png)
 
-Once the left most pair has been split, stitch back together in order, first order.
+now the same process repeats for R, Stitch complete R backtogether in order.
 
 ![right merge](./assets/merge_second_right.png)
 
-now the same process repeats for R, Stitch complete R backtogether in order.
+
+
+### Complete Merge of the Array
+
+merge R and L together to get complete sorted array
+
+![complete merge](./assets/complete-sort-merge.png)
+
+### Efficency
+
+- Time: O(nlog(n))
+    - The basic operation of this algorithm is comparison. This will happen n * (log(n)) number of times…concluding the algorithm to be n log(n).
+- Space: O(n)
+    - the space is being created with response to the input array size. This array is being sorted in place…keeping the space at linear complexity (n)
+
+
+
 
 
 
