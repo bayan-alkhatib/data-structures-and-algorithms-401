@@ -20,5 +20,7 @@
 |17|tree-breadth-first|[tree-breadth-first](./challenges/tree-breadth-first/README.md)|
 |18|tree-fizz-buz|[tree-fizz-buzz](./challenges/tree-fizz-buzz/README.md)|
 |26|Insertion-Sort|[Insertion-Sort](./challenges/insertion-sort/README.md)|
+|27|Merge-Sort|[Merge-Sort](./challenges/merge_sort/README.md)|
+
 
 
