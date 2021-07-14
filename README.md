@@ -21,6 +21,7 @@
 |18|tree-fizz-buz|[tree-fizz-buzz](./challenges/tree-fizz-buzz/README.md)|
 |26|Insertion-Sort|[Insertion-Sort](./challenges/insertion-sort/README.md)|
 |27|Merge-Sort|[Merge-Sort](./challenges/merge_sort/README.md)|
+|28|Quick-Sort|[Quick-Sort](./challenges/quick_sort/README.md)|
 
 
 
