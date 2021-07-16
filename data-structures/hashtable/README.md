@@ -7,8 +7,8 @@ to build hashtable class and define add, get and contains methods for it
 ## Approach & Efficiency
 hash: time O(n), space O(1)
 add:  time O(1), space O(1)
-get:  time O(n)  space O(1)
-contains: time O(n)  space O(1)
+get:  time O(1)  space O(1)
+contains: time O(1)  space O(1)
 
 ## API
 hash:  method returns Index in the collection for that key
