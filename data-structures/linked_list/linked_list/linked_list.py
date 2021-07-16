@@ -27,7 +27,7 @@ class LinkedList:
         if self.head == None:
             return False
         else:
-            temporary_value=Node(value)
+            temporary_value=self.head
             while temporary_value:
                 if temporary_value.value==value:
                     return True
@@ -43,7 +43,7 @@ class LinkedList:
             values=''
             temporary_value=self.head
             while temporary_value:
-                values+='{'+ f'{temporary_value.value}' +'} ' + '-> ' 
+                values+=f'{temporary_value.value}'  + '-> ' 
                 temporary_value=temporary_value.next
             values=values +'NULL'
             return f'{values}'

@@ -22,6 +22,7 @@
 |26|Insertion-Sort|[Insertion-Sort](./challenges/insertion-sort/README.md)|
 |27|Merge-Sort|[Merge-Sort](./challenges/merge_sort/README.md)|
 |28|Quick-Sort|[Quick-Sort](./challenges/quick_sort/README.md)|
+|30|hashtable|[hashtable](./data-structures/hashtable/README.md)|
 
 
 
