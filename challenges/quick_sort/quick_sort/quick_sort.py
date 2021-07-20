@@ -37,4 +37,4 @@ def Swap(arr, i, low):
     arr[low] = temp
 
 
-# print(quick_sort([8,4,23,42,16,15],0,5))
+print(partition([8,4,23,42,16,15],0,1))

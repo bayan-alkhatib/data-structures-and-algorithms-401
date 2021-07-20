@@ -39,4 +39,4 @@ ALGORITHM Swap(arr, i, low)
 ```
 
 ## Trace
-
+![image](./assets/challenge-28-quick-sort.png)
