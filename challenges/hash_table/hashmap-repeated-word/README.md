@@ -3,7 +3,7 @@
 
  ## Whiteboard Process
 
-![image](./assets/ll-zip.png)
+![image](../assets/ll-zip.png)
 
 ## Approach & Efficiency
 

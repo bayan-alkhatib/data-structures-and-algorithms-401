@@ -23,7 +23,7 @@
 |27|Merge-Sort|[Merge-Sort](./challenges/array/merge_sort/README.md)|
 |28|Quick-Sort|[Quick-Sort](./challenges/array/quick_sort/README.md)|
 |30|hashtable|[hashtable](./data-structures/hashtable/README.md)|
-|31|hash-map|[hash-map](./challenges/hash_table/hash-map-repeated-word/README.md)|
+|31|hash-map|[hash-map](./challenges/hash_table/hashmap-repeated-word/README.md)|
 
 
 
