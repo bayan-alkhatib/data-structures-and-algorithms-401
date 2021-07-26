@@ -4,7 +4,7 @@ key=7
 def binary_search(arr,search_key):
     search_start=0 
     search_end=len(arr)-1
-    if key in arr:
+    if search_key in arr:
         while search_start<= search_end:
             search_idx=(search_start+search_end)//2
             if arr[search_idx] <search_key:

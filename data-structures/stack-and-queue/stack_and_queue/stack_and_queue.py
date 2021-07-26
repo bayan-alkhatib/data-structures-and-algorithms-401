@@ -49,7 +49,7 @@ class Queue():
 
     def enqueue (self,value):
         node=Node(value)
-        if self.rear==None:
+        if self.front==None:
             self.front=node
             self.rear=node
             return self.rear.value

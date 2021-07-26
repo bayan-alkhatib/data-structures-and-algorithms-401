@@ -11,7 +11,7 @@ class Binary_Tree:
         self.root = None
 
     def pre_order(self):
-        """ node-left-right """
+        """ root-left-right """
         try:
 
             self.values=[]
