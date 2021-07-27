@@ -17,7 +17,7 @@ Trees Data Structure represent nodes connected by edges.
 ![image](./assets/chalenge16-tree.png)
 
 ## Approach & Efficiency
-- max: time O(logn), space O(1)
+- max: time O(n), space O(1)
 - pre order: time O(n), space O(n)
 - in order: time O(n), space O(n)
 - post order: time O(n), space O(n)

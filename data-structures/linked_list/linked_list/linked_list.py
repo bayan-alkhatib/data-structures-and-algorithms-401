@@ -60,23 +60,22 @@ class LinkedList:
             return current.next
 
     def insert_before(self,val,new_val):
-        try:
-            current=self.head
             if self.head ==None:
                 self.head=Node(val)
-                return self.head
-            elif current.value == val:
-                       self.insert(new_val)
+            if self.head.value == val:
+                self.insert(new_val)
             else:
-                while current: 
-                    if  current.next.value== val:
-                        saved_current_val=current.next
-                        current.next=Node(new_val)
-                        current.next.next=saved_current_val 
-                        return current.next
-                    current=current.next
-        except:
-            raise Exception ('Error')
+                try:
+                    current=self.head
+                    while current.next: 
+                        if  current.next.value== val:
+                            saved_current_val=current.next
+                            current.next=Node(new_val)
+                            current.next.next=saved_current_val 
+                            return current.next
+                        current=current.next
+                except:
+                    raise Exception (f'{val} is not in linked list')
 
 
     def insert_after(self,val,new_val):
@@ -113,5 +112,18 @@ class LinkedList:
                     if i == count:
                         return current.value
                     current =current.next    
+
+    def kth(self,j):
+        current=self.head
+        val=[]
+        while current:
+            val+=[current.value]
+            current=current.next
+        val=val[::-1]
+
+        for i in range(len(val)):
+            if i==j:
+                return val[j]
+
 
 
