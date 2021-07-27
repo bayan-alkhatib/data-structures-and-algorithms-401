@@ -4,7 +4,7 @@ sys.path.append("/home/bayan/code-401/data-structures-and-algorithms-401/data-st
 from hashtable.hashtable import Hashtable
 
 sys.path.append("/home/bayan/code-401/data-structures-and-algorithms-401/data-structures/trees")
-from trees.trees import Binary_Search_Tree
+from trees.trees import Binary_Tree, Node
 
 
 def tree_intersection(bt1,bt2):
@@ -35,31 +35,31 @@ def tree_intersection(bt1,bt2):
     return array
 
 if __name__=='__main__':
-    bt1=Binary_Search_Tree()
-    bt1.add(150)
-    bt1.add(100)
-    bt1.add(250)
-    bt1.add(75)
-    bt1.add(160)
-    bt1.add(200)
-    bt1.add(350)
-    bt1.add(125)
-    bt1.add(175)
-    bt1.add(300)
-    bt1.add(500)
+    bt1=Binary_Tree()
+    bt1.root=Node(150)
+    bt1.root.left=Node(100)
+    bt1.root.right=Node(250)
+    bt1.root.left.left=Node(75)
+    bt1.root.left.right=Node(160)
+    bt1.root.right.left=Node(200)
+    bt1.root.right.right=Node(350)
+    bt1.root.left.right.left=Node(125)
+    bt1.root.left.right.right=Node(175)
+    bt1.root.right.right.left=Node(300)
+    bt1.root.right.right.right=Node(500)
 
-    bt2=Binary_Search_Tree()
-    bt2.add(42)
-    bt2.add(105)
-    bt2.add(600)
-    bt2.add(15)
-    bt2.add(161)
-    bt2.add(201)
-    bt2.add(351)
-    bt2.add(126)
-    bt2.add(176)
-    bt2.add(4)
-    bt2.add(501)
+    bt2=Binary_Tree()
+    bt2.root=Node(42)
+    bt2.root.left=Node(100)
+    bt2.root.right=Node(600)
+    bt2.root.left.left=Node(15)
+    bt2.root.left.right=Node(160)
+    bt2.root.right.left=Node(200)
+    bt2.root.right.right=Node(350)
+    bt2.root.left.right.left=Node(125)
+    bt2.root.left.right.right=Node(175)
+    bt2.root.right.right.left=Node(4)
+    bt2.root.right.right.right=Node(500)
 
     print(tree_intersection(bt1,bt2))
 

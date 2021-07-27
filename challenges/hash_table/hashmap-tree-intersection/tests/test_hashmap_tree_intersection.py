@@ -5,7 +5,7 @@ import sys
 import pytest
 
 sys.path.append("/home/bayan/code-401/data-structures-and-algorithms-401/data-structures/trees")
-from trees.trees import Binary_Search_Tree
+from trees.trees import Binary_Tree, Node
 
 
 def test_version():
@@ -24,8 +24,8 @@ def test_success2(tree_2):
 
 
 def test_tree_empty():
-    bt1=Binary_Search_Tree()
-    bt2=Binary_Search_Tree()
+    bt1=Binary_Tree()
+    bt2=Binary_Tree()
     actual= tree_intersection(bt1,bt2)
     expected='input tree is empty'
     assert actual == expected
@@ -38,55 +38,59 @@ def test_tree_no_intersection(tree_3):
 
 @pytest.fixture
 def tree_1():
-    bt1=Binary_Search_Tree()
-    bt1.add(100)
-    bt1.add(85)
-    bt1.add(5)
-    bt1.add(306)
-    bt1.add(16)
-    bt1.add(250)
+    bt1=Binary_Tree()
+    bt1.root=Node(100)
+    bt1.root.left=Node(85)
+    bt1.root.left.left=Node(5)
+    bt1.root.right=Node(306)
+    bt1.root.left.right=Node(16)
+    bt1.root.right.left=Node(250)
 
-    bt2=Binary_Search_Tree()
-    bt2.add(100)
-    bt2.add(50)
-    bt2.add(200)
-    bt2.add(5)
-    bt2.add(13)
-    bt2.add(250)
+    bt2=Binary_Tree()
+    bt2.root=Node(100)
+    bt2.root.left=Node(50)
+    bt2.root.right=Node(200)
+    bt2.root.left.left=Node(5)
+    bt2.root.left.left.right=Node(13)
+    bt2.root.right.right=Node(250)
+
     return bt1,bt2
 
 @pytest.fixture
 def tree_2():
-    bt1=Binary_Search_Tree()
-    bt1.add(99)
-    bt1.add(50)
-    bt1.add(27)
-    bt1.add(16)
-    bt1.add(68)
+    bt1=Binary_Tree()
+    bt1.root=Node(99)
+    bt1.root.left=Node(50)
+    bt1.root.left.left=Node(27)
+    bt1.root.left.left.left=Node(16)
+    bt1.root.right=Node(68)
 
-    bt2=Binary_Search_Tree()
-    bt2.add(100)
-    bt2.add(50)
-    bt2.add(27)
-    bt2.add(13)
-    bt2.add(68)
+
+    bt2=Binary_Tree()
+    bt2.root=Node(100)
+    bt2.root.left=Node(50)
+    bt2.root.left.left=Node(27)
+    bt2.root.left.left.left=Node(13)
+    bt2.root.right=Node(68)
+
     return bt1,bt2
 
 @pytest.fixture
 def tree_3():
-    bt1=Binary_Search_Tree()
-    bt1.add(48)
-    bt1.add(50)
-    bt1.add(27)
-    bt1.add(16)
-    bt1.add(68)
+    bt1=Binary_Tree()
+    bt1.root=Node(48)
+    bt1.root.right=Node(50)
+    bt1.root.left=Node(27)
+    bt1.root.left.left=Node(16)
+    bt1.root.right.right=Node(68)
 
-    bt2=Binary_Search_Tree()
-    bt2.add(101)
-    bt2.add(51)
-    bt2.add(28)
-    bt2.add(13)
-    bt2.add(69)
+    bt2=Binary_Tree()
+    bt2.root=Node(101)
+    bt2.root.left=Node(51)
+    bt2.root.left.left=Node(28)
+    bt2.root.left.left.left=Node(13)
+    bt2.root.left.right=Node(69)
+
     return bt1,bt2
 
 

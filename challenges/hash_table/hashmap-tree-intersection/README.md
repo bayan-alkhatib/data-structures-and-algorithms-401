@@ -1,14 +1,13 @@
 ## Challenge Summary
- create a function that finds the first word to occur more than once in a string
-
+ create a function that takes 2 binary trees and return the values that exisists in both of them
  ## Whiteboard Process
 
-![image](./assets/hash-map.png)
+![image](./assets/challenge32-tree-intersection.png)
 
 ## Approach & Efficiency
 
-- time: O(1)
-- space O(1)
+- time: O(n)
+- space O(n)
 
 ## Solution:
-- repeated_word(str): that takes an argument a str and return the first duplicate value
+- tree_intersection: that takes an argument a 2 binary tree and return the values that exisists in both of them
