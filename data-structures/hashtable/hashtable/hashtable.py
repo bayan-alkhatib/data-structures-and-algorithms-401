@@ -8,7 +8,10 @@ class Hashtable:
         self.buckets=[None]*self.size
 
     def hash(self,key):
-        sum_of_assci=sum([ord(char) for char in key])
+        if type(key)==int:
+            sum_of_assci=key
+        else:
+            sum_of_assci=sum([ord(char) for char in key])
         temp_value=sum_of_assci*19
         hashed_key= temp_value % self.size
         return hashed_key
