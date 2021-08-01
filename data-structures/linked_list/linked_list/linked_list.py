@@ -1,3 +1,7 @@
+from io import StringIO
+from os import curdir
+
+
 class Node:
     def __init__(self, value):
         self.value = value
@@ -124,6 +128,97 @@ class LinkedList:
         for i in range(len(val)):
             if i==j:
                 return val[j]
+
+def funaddtwolists(l1, l2):
+    l1_arr=[]
+    l2_arr=[]
+    int_l1=''
+    int_l2=''
+
+    output_list= LinkedList()
+
+    current1=l1.head
+    current2=l2.head
+
+    while current1 or current2:
+        if current1:
+            l1_arr+=[str(current1.value)]
+            current1=current1.next
+        if current2:
+            l2_arr+=[str(current2.value)]
+            current2=current2.next
+        
+    l1_arr=l1_arr[::-1]
+    l2_arr=l2_arr[::-1]
+    
+    int_l1=int(int_l1.join(l1_arr))
+    int_l2=int(int_l2.join(l2_arr))
+
+    sum_lists= str(int_l1+int_l2)
+
+    for num in sum_lists:
+        output_list.insert(num)
+
+    return output_list
+
+
+
+# algorithm:
+# define array1 and array2
+
+# push values of list1 and list2 into array1 and array2
+
+# reverse array1 and array2
+
+# convert array1 and array2 into string
+
+# sum int array1 and array2
+
+# define output linked list  as linked list instance 
+
+# loop over string of sum 
+
+#     insert sum values int output linked list
+
+
+
+def link_odd_even(in_list):
+    l_list=LinkedList()
+    
+    current=in_list.head
+    count=1
+
+    while current:
+        if count%2==1:
+            l_list.append(current.value)
+        current=current.next
+        count+=1
+
+    current=in_list.head
+    count =1
+    
+    while current:
+        if count%2==0:
+            l_list.append(current.value)
+        current=current.next
+        count+=1
+    
+    in_list=l_list
+
+    return in_list 
+
+
+lnk_lst=LinkedList()
+lnk_lst.append(2)
+lnk_lst.append(1)
+lnk_lst.append(3)
+lnk_lst.append(5)
+lnk_lst.append(6)
+lnk_lst.append(4)
+lnk_lst.append(7)
+    
+print( link_odd_even(lnk_lst))
+
 
 
 
