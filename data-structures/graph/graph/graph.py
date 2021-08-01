@@ -24,30 +24,33 @@ class Graph:
             return None
 
         edge = Edge(end_node, weight)
-        self.adjancency_list[start_node].append(edge)
+        self.adjacency_list[start_node].append(edge)
 
     def get_nodes(self):
-        return self.adjacency_list.keys()
+        return [key.value for key in self.adjacency_list]
 
     def get_neighbors(self, node):
-        return self.adjacency_list[node]
+        return [(edge.node.value, edge.weight) for edge in self.adjacency_list[node]]
+
 
     def size(self):
         return len(self.adjacency_list)
 
+
+
 if __name__ == '__main__':
-    graph = Graph()
-    a = graph.add_node('a')
-    b = graph.add_node('b')
-    c = graph.add_node('c')
-    d = graph.add_node('d')
-    e = graph.add_node('e')
-    f = graph.add_node('f')
-    graph.add_edge(a, c)
-    graph.add_edge(a, d)
-    graph.add_edge(b, c)
-    graph.add_edge(b, f)
-    graph.add_edge(c, a)
+    # graph = Graph()
+    # a = graph.add_node('a')
+    # b = graph.add_node('b')
+    # c = graph.add_node('c')
+    # d = graph.add_node('d')
+    # e = graph.add_node('e')
+    # f = graph.add_node('f')
+    # graph.add_edge(a, c)
+    # graph.add_edge(a, d)
+    # graph.add_edge(b, c)
+    # graph.add_edge(b, f)
+    # graph.add_edge(c, a)
     # graph.add_edge(c, b)
     # graph.add_edge(c, e)
     # graph.add_edge(d, a)
@@ -57,7 +60,15 @@ if __name__ == '__main__':
     # graph.add_edge(e, f)
     # graph.add_edge(f, b)
     # graph.add_edge(f, e)
-    print(graph.get_nodes())
+    graph = Graph()
+    a = graph.add_node('a')
+    b = graph.add_node('b')
+    c = graph.add_node('c')
+    graph.add_edge(a,b,5)
+    graph.add_edge(a,c,7)
+    expected=[(b,5), (c,7)]
+    actual=graph.get_neighbors(a)
+    print(actual)
 
 
 
