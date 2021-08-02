@@ -208,16 +208,46 @@ def link_odd_even(in_list):
     return in_list 
 
 
+##  swape_adjacent_nodes
+# algorithm:
+# 1. define a function called swape_adjacent with an argment linked_list
+#         2. define current variable as linked_list.head
+#         3. loop over current
+#             4. if current.next == none:
+#                 break
+#             5. swape between current and current.next
+#             6. update current to current.next.next (move 2 steps)
+#         7. return linked list
+
+# edge case:
+# if we reach  a next node before non (len linked list is odd )
+
+# input= linked list
+# output= linked list with every adjecent nodes are swapped
+
+def swape_adjacent(ll):
+    current=ll.head
+    while current:
+        if current.next ==None:
+            break
+        print('*')
+        temp= current
+        prev=current.next
+        prev.next=temp
+        current=current.next.next
+    return ll
+
+
+
 lnk_lst=LinkedList()
 lnk_lst.append(2)
 lnk_lst.append(1)
 lnk_lst.append(3)
 lnk_lst.append(5)
 lnk_lst.append(6)
-lnk_lst.append(4)
 lnk_lst.append(7)
-    
-print( link_odd_even(lnk_lst))
+print(lnk_lst)
+print('1',swape_adjacent(lnk_lst))
 
 
 
