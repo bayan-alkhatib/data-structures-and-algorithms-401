@@ -26,6 +26,7 @@
 |31|hash-map|[hash-map](./challenges/hash_table/hashmap-repeated-word/README.md)|
 |32|hashmap-tree-intersection|[hashmap-tree-intersection](./challenges/hash_table/hashmap-tree-intersection/README.md)|
 |33|hashmap-left-join|[hashmap-left-join](./challenges/hash_table/hashmap-left-join/README.md)|
+|35|Graphs|[Graphs](./data-structures/graph/README.md)|
 
 
 
