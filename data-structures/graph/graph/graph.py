@@ -1,3 +1,7 @@
+import sys
+sys.path.append("/home/bayan/code-401/data-structures-and-algorithms-401/data-structures/stack_and_queue")
+from stack_and_queue.stack_and_queue import Queue
+
 class Node:
     def __init__(self, value):
         self.value = value
@@ -36,39 +40,60 @@ class Graph:
     def size(self):
         return len(self.adjacency_list)
 
+    def breadth_first(self, node):
+        nodes=[]
+        queue= Queue()
+        visited= set()
+
+        if node not in self.adjacency_list or self.adjacency_list[node]==[]:
+            return None
+
+        queue.enqueue(node)
+        visited.add(node.value)
+        
+        while not queue.isEmpty():
+            vertix=queue.dequeue()
+            nodes.append(vertix.value)
+
+            for edge in self.adjacency_list[vertix]:
+                if  edge.node.value not in visited:
+                    visited.add(edge.node.value)
+                    queue.enqueue(edge.node)
+        
+        return nodes
+
 
 
 if __name__ == '__main__':
-    # graph = Graph()
-    # a = graph.add_node('a')
-    # b = graph.add_node('b')
-    # c = graph.add_node('c')
-    # d = graph.add_node('d')
-    # e = graph.add_node('e')
-    # f = graph.add_node('f')
-    # graph.add_edge(a, c)
-    # graph.add_edge(a, d)
-    # graph.add_edge(b, c)
-    # graph.add_edge(b, f)
-    # graph.add_edge(c, a)
-    # graph.add_edge(c, b)
-    # graph.add_edge(c, e)
-    # graph.add_edge(d, a)
-    # graph.add_edge(d, e)
-    # graph.add_edge(e, c)
-    # graph.add_edge(e, d)
-    # graph.add_edge(e, f)
-    # graph.add_edge(f, b)
-    # graph.add_edge(f, e)
     graph = Graph()
     a = graph.add_node('a')
     b = graph.add_node('b')
     c = graph.add_node('c')
-    graph.add_edge(a,b,5)
-    graph.add_edge(a,c,7)
-    expected=[(b,5), (c,7)]
-    actual=graph.get_neighbors(a)
-    print(actual)
+    d = graph.add_node('d')
+    e = graph.add_node('e')
+    f = graph.add_node('f')
+    graph.add_edge(a, c)
+    graph.add_edge(a, d)
+    graph.add_edge(b, c)
+    graph.add_edge(b, f)
+    graph.add_edge(c, a)
+    graph.add_edge(c, b)
+    graph.add_edge(c, e)
+    graph.add_edge(d, a)
+    graph.add_edge(d, e)
+    graph.add_edge(e, c)
+    graph.add_edge(e, d)
+    graph.add_edge(e, f)
+    graph.add_edge(f, b)
+    graph.add_edge(f, e)
+    # graph = Graph()
+    # a = graph.add_node('a')
+    # b = graph.add_node('b')
+    # c = graph.add_node('c')
+    # d=4
+    # graph.add_edge(a,b,5)
+    # graph.add_edge(a,c,7)
+    print(graph.breadth_first(b))
 
 
 
