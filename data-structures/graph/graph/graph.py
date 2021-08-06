@@ -40,6 +40,20 @@ class Graph:
     def size(self):
         return len(self.adjacency_list)
 
+
+    def __str__(self):
+        output = ''
+        for vertix in self.adjacency_list.keys():
+            # Concatenate the value of vertix
+            output += vertix.value
+            # Iterate over all edges of this vertix
+            for edge in self.adjacency_list[vertix]:
+                output += ' -> ' + edge.node.value 
+            # Add a new line
+            output += '\n'
+        return output
+
+        
     def breadth_first(self, node):
         nodes=[]
         queue= Queue()
@@ -93,7 +107,8 @@ if __name__ == '__main__':
     # d=4
     # graph.add_edge(a,b,5)
     # graph.add_edge(a,c,7)
-    print(graph.breadth_first(b))
+    # print(graph.breadth_first(b))
+    print (graph)
 
 
 
