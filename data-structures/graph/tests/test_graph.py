@@ -72,6 +72,15 @@ def test_breadth_first(graph_3):
     actual=graph_3[0].breadth_first(graph_3[1])
     assert actual == expected 
 
+def test_depth_first(graph_3):
+    expected=['b', 'f', 'e', 'd', 'a', 'c']
+    actual=graph_3[0].depth_first(graph_3[1])
+    assert actual == expected 
+
+def test_depth_first1(graph_3):
+    expected=['e', 'f', 'b', 'd', 'a', 'c']
+    actual=graph_3[0].depth_first(graph_3[2])
+    assert actual == expected 
 
 
 @pytest.fixture
@@ -124,4 +133,4 @@ def graph_3():
     graph.add_edge(f, b)
     graph.add_edge(f, e) 
 
-    return graph, b
+    return graph, b, e
