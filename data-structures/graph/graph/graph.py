@@ -1,6 +1,6 @@
 import sys
 sys.path.append("/home/bayan/code-401/data-structures-and-algorithms-401/data-structures/stack_and_queue")
-from stack_and_queue.stack_and_queue import Queue
+from stack_and_queue.stack_and_queue import Queue, Stack
 
 class Node:
     def __init__(self, value):
@@ -76,6 +76,28 @@ class Graph:
         
         return nodes
 
+    def depth_first(self, node):
+        nodes=[]
+        stack= Stack()
+        visited= set()
+
+        if node not in self.adjacency_list or self.adjacency_list[node]==[]:
+            return None
+
+        stack.push(node)
+        visited.add(node.value)
+        
+        while not stack.isEmpty():
+            vertix=stack.pop()
+            nodes.append(vertix.value)
+
+            for edge in self.adjacency_list[vertix]:
+                if  edge.node.value not in visited:
+                    visited.add(edge.node.value)
+                    stack.push(edge.node)
+        
+        return nodes
+
 
 
 if __name__ == '__main__':
@@ -108,7 +130,7 @@ if __name__ == '__main__':
     # graph.add_edge(a,b,5)
     # graph.add_edge(a,c,7)
     # print(graph.breadth_first(b))
-    print (graph)
+    print (graph.depth_first(e))
 
 
 
